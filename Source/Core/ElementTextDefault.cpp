@@ -212,6 +212,10 @@ void ElementTextDefault::ClearLines()
 
 	lines.clear();
 	decoration.Release(true);
+
+	// Change the generated-flag because AddLine() only restores decorations if
+	// they are active
+	generated_decoration = decoration_property;
 }
 
 // Adds a new line into the text element.
