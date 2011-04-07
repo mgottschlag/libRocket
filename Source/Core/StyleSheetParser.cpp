@@ -221,7 +221,7 @@ bool StyleSheetParser::ImportProperties(StyleSheetNode* node, const String& name
 			{
 				switch (identifier[0])
 				{
-					case '#':	id = identifier.Substring(1); break;
+					case '#':	id = identifier.Substring(1).ToLower(); break;
 					case '.':	classes.push_back(identifier.Substring(1)); break;
 					case ':':
 					{
